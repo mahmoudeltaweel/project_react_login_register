@@ -1,10 +1,12 @@
 import Header from "./Componenets/Header";
 
-export default function Home(){
+export default function About(){
     return(
         <div>
              <Header />
-             <div>Home</div>
+             <div>
+                About
+             </div>
         </div>
     )
 }

@@ -19,7 +19,10 @@ export default function Header(){
                     </Link>
                     <Link to="/login" style={{textAlign:"center"}} className="register-nav">
                         Login
-                    </Link> </>) :( <div className="register-nav" onClick={handleLogOut}>Log Out</div> ) }
+                    </Link> </>) :( <div> <div className="register-nav" onClick={handleLogOut}>Log Out</div> <div> 
+                    <Link to="/dashboard" className="register-nav">Go To Dashboard </Link> 
+
+                        </div> </div>  ) }
                     
                 </div>
             </nav>

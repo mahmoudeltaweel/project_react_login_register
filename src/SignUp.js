@@ -1,5 +1,6 @@
 import  axios  from "axios";
 import { useState } from "react";
+import Header from "./Componenets/Header";
 
 
 export default function SignUp() {
@@ -38,6 +39,7 @@ export default function SignUp() {
 
    }
   return (
+    <div> <Header />
     <div className="parent">
       <div className="register">
         <form onSubmit={submit}>
@@ -82,6 +84,7 @@ export default function SignUp() {
             <button type="submit">Register</button>
           </div>
         </form>
+      </div>
       </div>
     </div>
   );

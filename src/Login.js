@@ -1,5 +1,6 @@
 import  axios  from "axios";
 import { useState } from "react";
+import Header from "./Componenets/Header";
 
 export default function Login() {
   const [email, setemail] = useState("");
@@ -30,6 +31,8 @@ export default function Login() {
     
   }
   return (
+    <div> 
+      <Header />
     <div className="parent">
       <div className="register">
         <form onSubmit={submit}>
@@ -42,7 +45,7 @@ export default function Login() {
             value={email}
             onChange={(e) => setemail(e.target.value)}
           />
-          {accept && emailError==401 && <p className="error">The email has not find or password fail</p>}
+          {accept && emailError===401 && <p className="error">The email has not find or password fail</p>}
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -57,6 +60,7 @@ export default function Login() {
             <button type="submit">Log in</button>
           </div>
         </form>
+      </div>
       </div>
     </div>
   );
