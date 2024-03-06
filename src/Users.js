@@ -29,6 +29,7 @@ export default function Users(){
             <td>
                 <Link to={`${user.id}`}>
             <i 
+
             className="fa-solid fa-pen-to-square"
             style={{color:"#74afb9" , fontSize:"20px" ,paddingRight:"4px" , cursor:"pointer" }}
             ></i>
