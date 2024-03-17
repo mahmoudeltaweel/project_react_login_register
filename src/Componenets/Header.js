@@ -5,8 +5,8 @@ export default function Header(){
         window.location.pathname="/";
     }
     return(
-        <div className="continer" >
-            <nav className="d-flex">
+        <div className="continer shadow" >
+            <nav className="d-flex p-2">
                 <div className="d-flex">
                     <Link to="/" >Home</Link>
                     <Link to="/about" >About</Link>

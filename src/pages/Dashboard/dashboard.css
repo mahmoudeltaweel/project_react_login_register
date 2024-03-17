@@ -15,12 +15,32 @@
     width: 20%;
     height: 100vh;
 }
+.fa-solid{
+    color: #1E3050;
+    margin-right: 10px;
+}
+
+
 
 .item-link{
     color: black;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.1s;
+    padding: 10px;
 }
+.item-link:hover{
+    background-color: #4d6288;
+    border-radius: 12px;
+}
+
+.active{
+    background-color: #4d6288;
+    border-radius: 12px;
+}
+
 
 /* table */
 table{

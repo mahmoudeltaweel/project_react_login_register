@@ -1,12 +1,13 @@
-import About from "./About";
-import Dashboard from "./Dashboard";
-import Home from "./Home";
-import Login from "./Login";
-import Updateuser from "./Updateuser";
-import SignUp from "./SignUp";
+import About from "./pages/About";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Home from "./pages/Home";
+import Login from "./pages/Website/Auth/Login";
+import Updateuser from "./pages/Dashboard/Users/Updateuser";
+import SignUp from "./pages/Website/Auth/SignUp";
 import React from "react";
 import {Routes , Route} from "react-router-dom"
-import Users from "./Users";
+import Users from "./pages/Dashboard/Users/Users";
+import CreateUser from "./pages/Dashboard/Users/CreateUser";
 export default function App(){  
   return(
     <div>
@@ -16,8 +17,9 @@ export default function App(){
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/dashboard" element={<Dashboard />} >
-          <Route path="user" element={<Users />} />
-          <Route path="user/:id" element={<Updateuser />} />
+          <Route path="users" element={<Users />} />
+          <Route path="user/create" element={<CreateUser />} />
+          <Route path="users/:id" element={<Updateuser />} />
         </Route>
       </Routes>
     </div>

@@ -1,5 +1,6 @@
 import axios  from "axios";
 import { useEffect, useState } from "react";
+import "./index.css"
 
 export default function Forms(props){
     const[name,setname]=useState("");
@@ -12,6 +13,19 @@ export default function Forms(props){
         setname(props.name)
         setemail(props.email)
     },[props.name , props.email])
+    const styleRegister={
+      display:"flex",
+      justifyContent: "center",
+      alignItems: "center",
+      marginTop: "40px",
+    }
+    const form={
+      boxShadow: "0px 2px 15px rgba(1, 1, 1, 0.1)", 
+      width:"400px"
+    }
+    const button={
+      width:"100%"
+    }
     async function submit(e) {
         let flag=true;
         e.preventDefault();
@@ -41,8 +55,8 @@ export default function Forms(props){
     
        }
     return(
-        <div className="register">
-            <form onSubmit={submit}>
+        <div className="register" style={props.styleRegister && styleRegister}>
+            <form onSubmit={submit} style={props.styleRegister &&form}>
               <label htmlFor="name">Name:</label>
               <input
                 type="text"
@@ -81,7 +95,7 @@ export default function Forms(props){
               />
               {accept && password !== passwordR && <p className="error"> The Rebeat Password must be equal Password </p>}
               <div style={{ textAlign: "center" }}>
-                <button type="submit">{props.button}</button>
+                <button type="submit" style={props.buttonstyle&& button}>{props.button}</button>
               </div>
             </form>
           </div>

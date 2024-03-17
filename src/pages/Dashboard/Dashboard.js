@@ -1,5 +1,5 @@
-import SideBar from "./Componenets/SideBar";
-import TopBar from "./Componenets/TopBar";
+import SideBar from "../../Componenets/SideBar";
+import TopBar from "../../Componenets/TopBar";
 import {Outlet} from "react-router-dom";
 
 export default function Dashboard(){

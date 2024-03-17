@@ -1,12 +1,16 @@
 import  axios  from "axios";
 import { useState } from "react";
-import Header from "./Componenets/Header";
+import Header from "../../../Componenets/Header";
 
 export default function Login() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [accept, setaccept]=useState(false);
   const [emailError , setEmailError]=useState("");
+  const form ={
+    boxShadow: "0px 2px 15px rgba(1, 1, 1, 0.1)", 
+      width:"400px"
+  }
   async function submit(e) {
     let flag=true;
     e.preventDefault();
@@ -33,9 +37,9 @@ export default function Login() {
   return (
     <div> 
       <Header />
-    <div className="parent">
+    <div className="parent login shadow">
       <div className="register">
-        <form onSubmit={submit}>
+        <form onSubmit={submit} style={form}>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
