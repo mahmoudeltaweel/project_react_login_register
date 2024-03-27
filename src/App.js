@@ -8,6 +8,7 @@ import React from "react";
 import {Routes , Route} from "react-router-dom"
 import Users from "./pages/Dashboard/Users/Users";
 import CreateUser from "./pages/Dashboard/Users/CreateUser";
+import Product from "./pages/Dashboard/Products/Products";
 export default function App(){  
   return(
     <div>
@@ -20,6 +21,7 @@ export default function App(){
           <Route path="users" element={<Users />} />
           <Route path="user/create" element={<CreateUser />} />
           <Route path="users/:id" element={<Updateuser />} />
+          <Route path="product" element={<Product />} />
         </Route>
       </Routes>
     </div>

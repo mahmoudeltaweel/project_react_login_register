@@ -21,7 +21,7 @@ export default function updateUser(){
             <Forms 
                 button={"Update"}
                 endpoint={`user/update/${id}`}
-                navigate={"dashboard/user"}
+                navigate={"dashboard/users"}
                 localStorage={false}
                 name={name}
                 email={email}

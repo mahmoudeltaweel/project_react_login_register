@@ -17,7 +17,7 @@ export default function SignUp() {
       <Forms 
           button={"Register"} 
           endpoint={"register"}
-          navigate={"/"}
+          navigate={""}
           localStorage={true}
           styleRegister={true}
           />
