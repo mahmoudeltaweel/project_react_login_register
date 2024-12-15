@@ -1,6 +1,6 @@
-import SideBar from "../../Componenets/SideBar";
-import TopBar from "../../Componenets/TopBar";
-import {Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import SideBar from "./Components/SideBar";
+import TopBar from "./Components/TopBar";
 
 export default function Dashboard(){
     return(
@@ -13,5 +13,5 @@ export default function Dashboard(){
             </div>
             </div>
         </div>
-    );
+    )
 }
