@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./style.css";
+import "./../../../style.css";
 import axios from "axios";
-import Header from "./Components/Header";
+import Header from "../../../Components/Header";
+import "./login.css"
 
 export default function Login() {
   let [email, setEmail] = useState("");
@@ -22,11 +23,7 @@ export default function Login() {
             email:email,
             password:password,
         }
-        ) 
-        if(res.status===200){
-            window.localStorage.setItem("email",email)
-            window.location.pathname="/"
-          }       
+        )      
     }
 
     } catch(err){
@@ -38,8 +35,8 @@ export default function Login() {
   return (
     <div>
         <Header />
-    <div className="parent">
-      <div className="register">
+    <div className="parent login">
+      <div className="register login">
         <form onSubmit={submit}>
           <label htmlFor="email">Email:</label>
           <input

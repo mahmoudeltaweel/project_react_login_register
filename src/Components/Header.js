@@ -1,16 +1,8 @@
-import { Link } from "react-router-dom";
-
-// import "./../style.css"
+import { Link } from "react-router";
 export default function Header() {
-
-    function handelLogout(){
-        window.localStorage.removeItem("email");
-        window.location.pathname="/login"
-    }
   return (
-    <div className="container">
-      <nav className="d-flex">
-
+    <div className="container shadow">
+      <nav className="d-flex p-2">
         <div className="d-flex">
           <Link to={"/"} style={{ alignItems: "center" }}>
             Home
@@ -19,8 +11,6 @@ export default function Header() {
         </div>
 
         <div className="d-flex">
-        { !window.localStorage.getItem("email") ? <>
-          
           <Link
             to={"/register"}
             className="register-nav"
@@ -35,15 +25,21 @@ export default function Header() {
           >
             Login
           </Link>
-         </> : <Link
+          <Link
+            to={"/dashboard"}
+            className="register-nav"
+            style={{ alignItems: "center" }}
+          >
+            Dashboard
+          </Link>
+          {/* <Link
         to={"/logout"}
         onClick={handelLogout}
         className="register-nav"
         style={{ alignItems: "center" }}
       >
         Logout
-      </Link>}
-
+      </Link> */}
         </div>
       </nav>
     </div>
